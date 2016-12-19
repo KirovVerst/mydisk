@@ -9,10 +9,33 @@ https://docs.djangoproject.com/en/1.10/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.10/ref/settings/
 """
-try:
-    from mydisk.local_settings import *
-except ImportError:
-    pass
+import os
+
+if os.getenv("TRAVIS", None):
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+    SECRET_KEY = 'SecretKeyForUseOnTravis'
+
+    # SECURITY WARNING: don't run with debug turned on in production!
+    DEBUG = False
+    TEMPLATE_DEBUG = True
+
+    ALLOWED_HOSTS = []
+
+    # Database
+    # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
+
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
+else:
+    try:
+        from mydisk.local_settings import *
+    except ImportError:
+        pass
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
