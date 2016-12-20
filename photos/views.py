@@ -3,6 +3,7 @@ from rest_framework import viewsets, mixins, permissions
 from rest_framework.response import Response
 from photos.models import Photo
 from photos.serializers import PhotoSerializer
+from photos.signals import *
 
 
 # Create your views here.
