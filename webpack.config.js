@@ -5,7 +5,7 @@ module.exports = {
     context: __dirname,
     entry: './src/js/index',
     output: {
-        path: path.resolve('./assets/bundles/'),
+        path: path.resolve('./static/bundles/'),
         filename: 'index.js',
     },
     plugins: [
