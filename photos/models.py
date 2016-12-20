@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User
 from django.db import models
-from mydisk.settings import BASE_DIR, MEDIA_ROOT
+from photogram.settings import BASE_DIR, MEDIA_ROOT
 import os
 
 

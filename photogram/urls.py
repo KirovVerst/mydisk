@@ -17,7 +17,7 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from rest_framework_jwt.views import obtain_jwt_token
 from django.conf.urls.static import static
-from mydisk import settings
+from photogram import settings
 
 urlpatterns = [
                   url(r'^admin/', admin.site.urls),

@@ -33,7 +33,7 @@ if os.getenv("TRAVIS", None):
     }
 else:
     try:
-        from mydisk.local_settings import *
+        from photogram.local_settings import *
     except ImportError:
         pass
 
@@ -65,7 +65,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'mydisk.urls'
+ROOT_URLCONF = 'photogram.urls'
 
 TEMPLATES = [
     {
@@ -83,7 +83,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'mydisk.wsgi.application'
+WSGI_APPLICATION = 'photogram.wsgi.application'
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
