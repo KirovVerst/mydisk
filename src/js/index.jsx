@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-var Hello = React.createClass({
+import Bootstrap from 'bootstrap/dist/css/bootstrap.css';
+var App = React.createClass({
     render: function () {
         return (
             <div>
@@ -13,4 +14,4 @@ var Hello = React.createClass({
     }
 });
 
-ReactDOM.render(<Hello />, document.getElementById('container'));
+ReactDOM.render(<App/>, document.getElementById('container'));
