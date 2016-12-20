@@ -16,10 +16,12 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from rest_framework_jwt.views import obtain_jwt_token
+from django.conf.urls.static import static
+from mydisk import settings
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^api/v1/users/login', obtain_jwt_token),
-    url(r'^api/v1/users', include('users.urls')),
-    url(r'^api/v1/photos', include('photos.urls'))
-]
+                  url(r'^admin/', admin.site.urls),
+                  url(r'^api/v1/users/login', obtain_jwt_token),
+                  url(r'^api/v1/users', include('users.urls')),
+                  url(r'^api/v1/photos', include('photos.urls'))
+              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

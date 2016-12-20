@@ -14,7 +14,7 @@ class PhotoViewSet(viewsets.GenericViewSet,
     permission_classes = [permissions.IsAuthenticated]
 
     def get_queryset(self):
-        return Photo.objects.filter(user=self.request.user)
+        return Photo.objects.filter(user=self.request.user).order_by('-datetime')
 
     def create(self, request, *args, **kwargs):
         request.data['user'] = request.user.id
