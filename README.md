@@ -1,5 +1,5 @@
 # Photogram
-[![build-status-image]][travis]
+[![Build Status](https://travis-ci.org/KirovVerst/photogram.svg?branch=master)](https://travis-ci.org/KirovVerst/photogram)
 
 Web application for photo publishing
 ## Installing
