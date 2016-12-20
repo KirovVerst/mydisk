@@ -95,3 +95,8 @@ ENV/
 .idea
 
 media
+
+node_modules
+
+# js bundles
+assets/bundles
