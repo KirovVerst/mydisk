@@ -92,11 +92,11 @@ ENV/
 .ropeproject
 /db.sqlite3
 
-.idea
+.idea/
 
-media
+media/
 
-node_modules
+node_modules/
 
 # js bundles
-assets/bundles
+static/
