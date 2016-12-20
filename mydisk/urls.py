@@ -21,4 +21,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api/v1/users/login', obtain_jwt_token),
     url(r'^api/v1/users', include('users.urls')),
+    url(r'^api/v1/photos', include('photos.urls'))
 ]

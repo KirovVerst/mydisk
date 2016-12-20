@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/1.10/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.10/ref/settings/
 """
-import os
+import os, datetime
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if os.getenv("TRAVIS", None):
@@ -92,6 +92,11 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
     )
+}
+
+JWT_AUTH = {
+
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(days=30),
 }
 
 # Password validation
