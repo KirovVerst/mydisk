@@ -20,7 +20,7 @@ $ npm install
 Installation all necessary node modules.
 
 ### Building
-Developer mode
+Development mode
 ```shell
 $ npm run webpack
 ```
