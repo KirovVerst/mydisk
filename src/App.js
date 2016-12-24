@@ -7,8 +7,6 @@ export default class App extends Component {
           <h1>Photogram</h1>
           <a href="https://github.com/kirovverst/photogram.git">Github</a>
       </div>
-
-
     );
   }
 }
